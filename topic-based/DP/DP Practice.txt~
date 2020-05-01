@@ -1,0 +1,63 @@
+Advanced Dynamic Programming
+
+For Reading
+
+Commonly Used DP state domains : http://apps.topcoder.com/forums/?module=Thread&threadID=697369&start=0
+
+General Aspects of DP : http://apps.topcoder.com/forums/?module=Thread&threadID=700080&start=0
+
+Optimizing DP solutions : http://apps.topcoder.com/forums/?module=Thread&threadID=697925&start=0
+
+Dynamic Programming Optimizations
+
+Convex Hull Trick 1 : http://wcipeg.com/wiki/Convex_hull_trick
+Problem(s) : http://codeforces.com/contest/319/problem/C
+
+Divide and Conquer Optimization :
+http://codeforces.com/contest/321/problem/E
+https://www.hackerrank.com/contests/ioi-2014-practice-contest-2/challenges/guardians-lunatics-ioi14 (Solve problems with the help of editorial to learn)
+
+Convex Hull Trick 2 : http://apps.topcoder.com/forums/?module=Thread&threadID=608334&start=0&mc=14#1120736
+Problem(s) : http://www.spoj.com/problems/NKLEAVES/
+http://codeforces.com/contest/311/problem/B
+
+Digit DP
+
+http://stackoverflow.com/questions/22394257/how-to-count-integers-between-large-a-and-b-with-a-certain-property/22394258#22394258
+http://codeforces.com/blog/entry/8221
+Problem(s) : http://www.codechef.com/problems/ANUBGC
+http://www.spoj.com/problems/LUCIFER/
+http://www.spoj.com/problems/RAONE/
+http://www.spoj.com/problems/GONE/
+
+DP on trees
+
+http://www.iarcs.org.in/inoi/online-study-material/topics/dp-trees.php
+Problem(s) : http://www.spoj.com/problems/PT07F/
+https://www.spoj.pl/problems/PT07X/
+http://www.spoj.pl/problems/VOCV/
+
+Bitmask DP
+
+http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=bitManipulation
+Problem(s) : http://www.codechef.com/problems/TSHIRTS
+http://usaco.org/index.php?page=viewproblem2&cpid=515
+http://www.spoj.com/problems/HIST2/
+
+Solutions :
+TSHIRTS : http://www.codechef.com/viewplaintext/5234719
+HIST2 : http://pastebin.com/fxhdrmv0
+GONE : http://pastebin.com/P5uejHN3
+RAONE : http://pastebin.com/r8R2n6v0
+LUCIFER : http://pastebin.com/MSpNQtUt
+ANUBGC : http://pastebin.com/u7MUp8TP
+PT07X : http://pastebin.com/YjgstWQH
+
+CODECRAFT IIIT-HYDERABAD
+codeforces.com/blog/entry/16099
+
+QUTREE- www.codechef.com/viewplaintext/6075235
+COPERM -BITMASK_DP -- www.codechef.com/viewsolution/6072664
+CWAYS - www.codechef.com/viewplaintext/6075168
+
+

@@ -1,0 +1,85 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define MAX 100005
+int arr[MAX][100];
+int mar[MAX][100];
+int b[MAX];
+int main()
+{
+	int n,q,i,j;
+	cin>>n;
+	 
+	for(i=0;i<n;i++)
+		cin>>b[i];
+	int k= log2(n)+1;
+	for(i=0;i<n;i++)
+	{
+		arr[i][0]=i;
+		mar[i][0]=i;
+	}
+
+	for(j=1;j<k;j++)
+	{
+		for(i=0;(i+(1<<(j))-1)<n;i++)
+		{
+			if(b[arr[i][j-1]]<b[arr[i+(1<<(j-1))][j-1]])
+			arr[i][j]=arr[i][j-1];
+			else
+			arr[i][j]=arr[i+(1<<(j-1))][j-1];
+		}
+	}
+
+	cin>>q;
+	for(j=1;j<k;j++)
+	{
+		for(i=0;(i+(1<<(j))-1)<n;i++)
+		{
+
+		if(b[mar[i][j-1]]>=b[mar[i+(1<<(j-1))][j-1]])
+		mar[i][j]=mar[i][j-1];
+		else
+		mar[i][j]=mar[i+(1<<(j-1))][j-1];
+		}
+	}
+for(j=0;j<q;j++)
+{
+int l,r;
+int min,max1=0,max2=0,max=0;
+cin>>l>>r;
+int p = log2(r-l+1);
+if(b[arr[l][p]]<=b[arr[r-(1<<(p))+1][p]])
+min = b[arr[l][p]];
+else
+min = b[arr[r-(1<<p)+1][p]];
+if(l>0)
+{
+int p1 = log2(l);
+if(b[mar[0][p1]]>b[mar[(l-1)-(1<<(p1))+1][p1]])
+max1 = b[mar[0][p1]];
+else
+max1 = b[mar[(l-1)-(1<<p1)+1][p1]];
+}
+if(b[mar[l][p]]>b[mar[r-(1<<(p))+1][p]])
+max = b[mar[l][p]];
+else
+max = b[mar[r-(1<<p)+1][p]];
+if(r<n-1)
+{
+int p2 = log2(n-r-1);
+if(b[mar[r+1][p2]]>b[mar[(n-1)-(1<<(p2))+1][p2]])
+max2 = b[mar[r+1][p2]];
+else
+max2 = b[mar[(n-1)-(1<<p2)+1][p2]];
+}
+// printf("%d-%d-%d\n",max1,max,max2);
+float ans = 0.0;
+ans = (max1>max2?max1:max2);
+ans+=min;
+float c = (float)(max-min)/2 + float(min);
+ans = (c>ans?c:ans);
+printf("%.1f\n",ans);
+//cout<<min<<endl;
+}
+ 
+return 0;
+}

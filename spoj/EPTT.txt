@@ -1,0 +1,40 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+#define M 1000000
+int a[M];
+struct node
+{
+int c;
+int t;
+};
+struct node s[M];
+int main()
+{
+int t,i,j;
+scanf("%d",&t);
+for(i=0;i<t;i++)
+scanf("%d",&a[i]);
+std::sort(a+0,a+t);
+for(i=0;i<t;i++)
+{
+  for(j=0;j<M;j++)
+  {
+   if(s[j].c==0)
+     {
+      s[j].c++;
+      s[j].t=a[i];
+      break;
+      }
+    if(s[j].c<=3&&s[j].c>=1&&(s[j].t+30)==a[i])
+     {
+     s[j].c++;
+     s[j].t+=30;
+     break;
+     }
+ 
+  }
+}
+printf("%d",j+1);
+return 0;
+}

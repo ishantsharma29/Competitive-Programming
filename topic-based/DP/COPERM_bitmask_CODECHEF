@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+#define ll long long int
+#define mp make_pair
+#define pb push_back
+#define s(n) scanf("%d",&n);
+#define sl(n) scanf("%lld",&n);
+#define p(n) printf("%d\n",n)
+#define pl(n) printf("%lld\n",n)
+ 
+int n,k;
+ll dp[(1<<15)+5][16];
+ll recur(int mask,int prev){
+    if(mask==(1<<n)-1)
+        return 1;
+    if(dp[mask][prev]!=-1)
+        return dp[mask][prev];
+    ll ans=0;
+    for(int i=1;i<=n;i++){
+        if(mask&(1<<(i-1)))
+            continue;
+        if(prev==0||abs(i-prev)<=k)
+            ans+=recur(mask|(1<<(i-1)),i);
+    }
+    return dp[mask][prev]=ans;
+}
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        memset(dp,-1,sizeof(dp));
+        cin>>n>>k;
+        ll ans=0;
+        for(int i=1;i<=n;i++)
+            ans+=recur(1<<(i-1),i);
+        cout<<ans<<endl;
+    }
+    return 0;
+}
+

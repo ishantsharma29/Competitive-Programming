@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+typedef long long ll;
+typedef long double ld;
+typedef vector < long long > vll;
+typedef pair < long long, long long > pll;
+typedef pair < int, int > pii;
+typedef vector < int > vii;
+ 
+#define rep(i,n) for(ll i = 0; i < n; i++)
+#define reps(i,a,n) for(ll i = a; i < n; i++)
+#define csl ios_base::sync_with_stdio(false); cin.tie(NULL)
+#define all(x) x.begin(),x.end()
+#define l(x) (((x) << 1) | 1)
+#define r(x) ((l(x)) + 1)
+#define md(a,b) (((a) + (b)) >> 1LL)
+#define INF ((1LL << 29LL))
+#define pb push_back
+#define mp make_pair
+#define fst first
+#define snd second
+ 
+ll t, u, v, n, c, d, m, q, l, r, ql, qr, x;
+const int N = 1e5 + 100;
+const ll mod = 1e9 + 7;
+ll DP[N][2];
+vii adj[N];
+void dfs (int cur, int par) {
+        DP[cur][1] = 1;
+        rep (i, adj[cur].size()) {
+                if (adj[cur][i] == par) continue;
+                dfs(adj[cur][i], cur);
+                DP[cur][0] += DP[adj[cur][i]][1];
+                DP[cur][1] += min(DP[adj[cur][i]][1], DP[adj[cur][i]][0]);
+        }
+}
+int main() {
+    csl;
+        cin >> n;
+        rep (i, n - 1) {
+                cin >> u >> v;
+                adj[u].push_back(v);
+                adj[v].push_back(u);
+        }
+        dfs(1, -1);
+        cout << min(DP[1][0], DP[1][1]) << '\n';
+    return 0;
+}

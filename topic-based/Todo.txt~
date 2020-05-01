@@ -1,0 +1,39 @@
+1) Sorting -geeks - DONE
+2) GRAPHS--- bfs,dfs,MST algo, Topological Sort,Questions
+3) Tree ---- Binary Tree, B,B+,Splay,AVL,Red black
+4) Dynamic Programming (txt file)
+5)
+ Pattern Searching - KMP , Rabin Carp , Automata, z
+6) BIT algo -								Copy revise
+7) Backtracking -							See once before exam
+8) Segment tree and Binary Indexed Tree --				Revise Questions already done
+9) Suffix Array and TRIE						in progress
+10) aRRAY -								in progress
+
+	--Geeksquiz.com
+	dbms,OS,C,C++,NETWORKING,AUTOMATA,CO,MICRO
+
+	--INTERVIEWBIT(OPTIONAL)
+		
+	--Aptitude
+	
+	
+DONE-
+AVL,SPLAY,LINKEDLIST,QUEUE,STACK,BINARY TREE,KMP,RABIN-KARP,Sorting,MST 	
+	
+Suffix Array and Suffix TREE--REVISE
+1.)http://www.geeksforgeeks.org/longest-palindrome-substring-set-1/	O(N^3) AND dp O(n^2) timecomp && 0(n^2) space
+2.)http://www.geeksforgeeks.org/longest-palindromic-substring-set-2/
+
+Look Suffix Tree Construction -NOT DONE SIX SETS
+
+
+Manacher Algo--
+http://www.geeksforgeeks.org/suffix-tree-application-6-longest-palindromic-substring/
+http://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-1/--- DONE
+http://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/    NOTDONE 
+http://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-3-2/  NOTDONE
+http://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-4/    NOTDONE
+
+
+
